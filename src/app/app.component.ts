@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { UiModule } from '@ecommerce/ui';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [RouterModule, UiModule],
   selector: 'ecommerce-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
