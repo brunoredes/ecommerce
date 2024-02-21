@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ecommerce/product-data-access": [
+        "modules/data-access/product/src/index.ts"
+      ],
       "@ecommerce/ui": ["modules/feature/ui/src/index.ts"]
     }
   },
