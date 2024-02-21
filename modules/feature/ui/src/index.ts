@@ -1,3 +1,3 @@
 export * from './lib/ui.module';
 
-export * from './lib/modules/feature/ui/src/lib/header.component';
+export * from './lib/modules/header/header.component';
