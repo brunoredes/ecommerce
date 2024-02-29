@@ -18,6 +18,9 @@
       "@ecommerce/product-data-access": [
         "modules/data-access/product/src/index.ts"
       ],
+      "@ecommerce/product-search": [
+        "modules/feature/product/search/src/index.ts"
+      ],
       "@ecommerce/ui": ["modules/feature/ui/src/index.ts"]
     }
   },
