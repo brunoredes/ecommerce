@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
-import { input, signal } from '@angular/core';
+import { input } from '@angular/core';
 
 const mockTitle = 'Mock Title';
 
