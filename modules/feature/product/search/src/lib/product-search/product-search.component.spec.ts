@@ -19,4 +19,8 @@ describe('ProductSearchComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('expect method sum', () => {
+    expect(1 + 1).toBe(2);
+  });
 });

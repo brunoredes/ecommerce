@@ -27,4 +27,8 @@ export class ProductSearchComponent {
     disabled: false,
   });
   products = productsMock;
+
+  meuMetodo() {
+    return 1 + 1;
+  }
 }
