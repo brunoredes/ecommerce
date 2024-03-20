@@ -1,5 +1,9 @@
 import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {
+    path: 'home',
+    loadChildren: () => import('@ecommerce/home').then((c) => c.homeRoutes),
+  },
 ];
