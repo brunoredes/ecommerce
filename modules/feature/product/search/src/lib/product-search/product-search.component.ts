@@ -4,6 +4,7 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { RouterLink } from '@angular/router';
 import { ProductSearchService } from '@ecommerce/product-data-access';
 import { Product } from 'modules/data-access/product/src/lib/models/product.model';
 import {
@@ -12,6 +13,7 @@ import {
   distinctUntilChanged,
   filter,
   switchMap,
+  tap,
 } from 'rxjs';
 
 @Component({
@@ -25,6 +27,7 @@ import {
     FormsModule,
     ReactiveFormsModule,
     AsyncPipe,
+    RouterLink,
   ],
   templateUrl: './product-search.component.html',
   styleUrl: './product-search.component.scss',
@@ -47,7 +50,7 @@ export class ProductSearchComponent implements OnInit {
       // BORA UTILIZAR OS OPERADORES
       debounceTime(500),
       distinctUntilChanged(),
-      filter((text: string) => text.length > 1),
+      filter((text: string) => text.length > 0),
       switchMap((text) => this.productSearchService.searchByName(text)),
     );
   }
