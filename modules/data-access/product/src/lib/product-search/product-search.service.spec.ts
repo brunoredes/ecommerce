@@ -36,4 +36,19 @@ describe('ProductSearchService', () => {
     expect(request.request.method).toBe('GET');
     expect(result).toEqual(productsMock);
   });
+
+  it('should return product by id correctly', () => {
+    const mockId = '123';
+    const url = `${environment.apiUrl}/products/${mockId}`;
+    let result!: Product;
+
+    service
+      .getById(mockId)
+      .subscribe({ next: (product) => (result = product) });
+
+    const request = httpMock.expectOne(url);
+    request.flush(productsMock[0]);
+    expect(request.request.method).toBe('GET');
+    expect(result).toEqual(productsMock[0]);
+  });
 });
