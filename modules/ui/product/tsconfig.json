@@ -7,10 +7,7 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "paths": {
-      "@ecommerce-env": ["src/environments/index.ts"]
-    }
+    "noFallthroughCasesInSwitch": true
   },
   "files": [],
   "include": [],

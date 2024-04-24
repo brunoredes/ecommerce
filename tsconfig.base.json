@@ -16,12 +16,17 @@
     "baseUrl": ".",
     "paths": {
       "@ecommerce/home": ["modules/feature/home/src/index.ts"],
+      "@ecommerce/product-card": ["modules/ui/product/src/index.ts"],
       "@ecommerce/product-data-access": [
         "modules/data-access/product/src/index.ts"
+      ],
+      "@ecommerce/product-env": [
+        "modules/data-access/product/src/environments/index.ts"
       ],
       "@ecommerce/product-search": [
         "modules/feature/product/search/src/index.ts"
       ],
+      "@ecommerce/product-ui": ["modules/ui/product/src/index.ts"],
       "@ecommerce/ui": ["modules/feature/ui/src/index.ts"]
     }
   },
