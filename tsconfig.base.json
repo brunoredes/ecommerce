@@ -20,6 +20,9 @@
       "@ecommerce/product-data-access": [
         "modules/data-access/product/src/index.ts"
       ],
+      "@ecommerce/product-detail": [
+        "modules/feature/product/detail/src/index.ts"
+      ],
       "@ecommerce/product-env": [
         "modules/data-access/product/src/environments/index.ts"
       ],
