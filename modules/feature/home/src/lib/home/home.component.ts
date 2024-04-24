@@ -1,16 +1,22 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { MatCardModule } from '@angular/material/card';
-import { Product } from 'modules/data-access/product/src/lib/models/product.model';
-import { productsMock } from '@ecommerce/product-data-access';
+import { AsyncPipe, CommonModule } from '@angular/common';
+import {
+  Component,
+  // inject
+} from '@angular/core';
+import { RecommendedProductsService } from 'modules/data-access/product/src/lib/recommended-products/recommended-products.service';
+import { ProductCardComponent } from 'modules/ui/product/src/lib/product-card/product-card.component';
 @Component({
   selector: 'ecommerce-home',
   standalone: true,
-  imports: [CommonModule, MatCardModule, NgOptimizedImage],
+  imports: [CommonModule, ProductCardComponent, AsyncPipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  public products = input<Product[]>(productsMock);
+  public products$ = this.recommendedProductsService.getProducts();
+
+  constructor(private recommendedProductsService: RecommendedProductsService) {}
+  // private readonly recommendedProductsService = inject(
+  //   RecommendedProductsService,
+  // );
 }

@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HeaderComponent } from './header.component';
-import { input } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HeaderComponent } from './header.component';
 
 const mockTitle = 'Mock Title';
 
@@ -17,8 +16,8 @@ describe('HeaderComponent', () => {
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
-    component.title = input(mockTitle);
     fixture.detectChanges();
+    component.title = mockTitle;
   });
 
   it('should create', () => {
@@ -26,11 +25,12 @@ describe('HeaderComponent', () => {
   });
 
   it('should have a dynamic title', () => {
+    fixture.detectChanges();
     const title: HTMLHeadingElement =
       fixture.nativeElement.querySelector('.header__logo');
     expect(title.textContent).toEqual(mockTitle);
 
-    component.title = input('Another title');
+    component.title = 'Another title';
     fixture.detectChanges();
     expect(title.textContent).toBe('Another title');
   });

@@ -1,4 +1,4 @@
-import { Component, InputSignal, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'ecommerce-header',
@@ -6,5 +6,5 @@ import { Component, InputSignal, input } from '@angular/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  public title: InputSignal<string> = input.required();
+  @Input({ required: true }) public title = '';
 }
