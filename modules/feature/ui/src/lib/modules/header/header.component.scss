@@ -6,6 +6,10 @@
   padding: 20px;
   background-color: #6f25f1;
   &__logo {
+    text-decoration: none;
+  }
+
+  &__title {
     color: #fff;
   }
 }
