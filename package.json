@@ -20,7 +20,7 @@
     "@angular/platform-browser": "17.3.5",
     "@angular/platform-browser-dynamic": "17.3.5",
     "@angular/router": "17.3.5",
-    "@nx/angular": "18.3.3",
+    "@nx/angular": "18.3.4",
     "rxjs": "~7.8.1",
     "tslib": "^2.6.2",
     "zone.js": "~0.14.4"
@@ -35,13 +35,13 @@
     "@angular/cli": "~17.3.0",
     "@angular/compiler-cli": "17.3.5",
     "@angular/language-service": "17.3.5",
-    "@nx/cypress": "18.3.3",
-    "@nx/eslint": "18.3.3",
-    "@nx/eslint-plugin": "18.3.3",
-    "@nx/jest": "18.3.3",
-    "@nx/js": "18.3.3",
-    "@nx/web": "18.3.3",
-    "@nx/workspace": "18.3.3",
+    "@nx/cypress": "18.3.4",
+    "@nx/eslint": "18.3.4",
+    "@nx/eslint-plugin": "18.3.4",
+    "@nx/jest": "18.3.4",
+    "@nx/js": "18.3.4",
+    "@nx/web": "18.3.4",
+    "@nx/workspace": "18.3.4",
     "@schematics/angular": "17.3.5",
     "@swc-node/register": "1.8.0",
     "@swc/core": "~1.4.2",
@@ -60,10 +60,11 @@
     "jest-preset-angular": "14.0.3",
     "jsonc-eslint-parser": "^2.4.0",
     "lint-staged": "^15.2.2",
-    "nx": "18.3.3",
+    "nx": "18.3.4",
     "prettier": "^3.2.5",
     "ts-jest": "^29.1.2",
     "ts-node": "10.9.2",
     "typescript": "5.4.5"
   }
 }
+
