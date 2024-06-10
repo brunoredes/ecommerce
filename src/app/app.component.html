@@ -1,4 +1,8 @@
 <ecommerce-header title="Ecommerce">
   <ecommerce-product-search right />
+  <div right class="right-content">
+    <ecommerce-cart [quantity]="quantity()" />
+    <p>Login</p>
+  </div>
 </ecommerce-header>
 <router-outlet></router-outlet>
