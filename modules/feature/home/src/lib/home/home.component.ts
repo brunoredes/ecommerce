@@ -4,7 +4,7 @@ import {
   // inject
 } from '@angular/core';
 import { RecommendedProductsService } from 'modules/data-access/product/src/lib/recommended-products/recommended-products.service';
-import { ProductCardComponent } from 'modules/ui/product/src/lib/product-card/product-card.component';
+import { ProductCardComponent } from 'modules/ui/product/src/lib/components/product-card/product-card.component';
 @Component({
   selector: 'ecommerce-home',
   standalone: true,
