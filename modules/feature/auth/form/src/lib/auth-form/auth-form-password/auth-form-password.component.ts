@@ -1,16 +1,18 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { AuthFormComponent } from '../auth-form.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'lib-auth-form-password',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, MatInputModule, MatButtonModule, ReactiveFormsModule],
   templateUrl: './auth-form-password.component.html',
   styleUrl: './auth-form-password.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AuthFormPasswordComponent {
-  form = inject(AuthFormComponent).form.controls.password;
+  control = inject(AuthFormComponent).form.controls.password;
 }
