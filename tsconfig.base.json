@@ -15,24 +15,26 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ecommerce/auth-data-access": ["modules/data-access/auth/src/index.ts"],
-      "@ecommerce/auth-form": ["modules/feature/auth/form/src/index.ts"],
-      "@ecommerce/home": ["modules/feature/home/src/index.ts"],
-      "@ecommerce/product-card": ["modules/ui/product/src/index.ts"],
+      "@ecommerce/auth-data-access": [
+        "libs/modules/data-access/auth/src/index.ts"
+      ],
+      "@ecommerce/auth-form": ["libs/modules/feature/auth/form/src/index.ts"],
+      "@ecommerce/home": ["libs/modules/feature/home/src/index.ts"],
+      "@ecommerce/product-card": ["libs/modules/ui/product/src/index.ts"],
       "@ecommerce/product-data-access": [
-        "modules/data-access/product/src/index.ts"
+        "libs/modules/data-access/product/src/index.ts"
       ],
       "@ecommerce/product-detail": [
-        "modules/feature/product/detail/src/index.ts"
+        "libs/modules/feature/product/detail/src/index.ts"
       ],
       "@ecommerce/product-env": [
         "modules/data-access/product/src/environments/index.ts"
       ],
       "@ecommerce/product-search": [
-        "modules/feature/product/search/src/index.ts"
+        "libs/modules/feature/product/search/src/index.ts"
       ],
       "@ecommerce/product-ui": ["modules/ui/product/src/index.ts"],
-      "@ecommerce/ui": ["modules/feature/ui/src/index.ts"]
+      "@ecommerce/ui": ["libs/modules/feature/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

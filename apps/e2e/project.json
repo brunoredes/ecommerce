@@ -1,0 +1,30 @@
+{
+  "name": "e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/e2e/src",
+  "tags": [],
+  "implicitDependencies": ["ecommerce"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "ecommerce:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "ecommerce:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "ecommerce:serve-static"
+        }
+      }
+    }
+  }
+}

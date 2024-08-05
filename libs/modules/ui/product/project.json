@@ -1,0 +1,17 @@
+{
+  "name": "product-card",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/modules/ui/product/src",
+  "prefix": "ecommerce",
+  "projectType": "library",
+  "tags": ["type:ui"],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/modules/ui/product/jest.config.ts"
+      }
+    }
+  }
+}
