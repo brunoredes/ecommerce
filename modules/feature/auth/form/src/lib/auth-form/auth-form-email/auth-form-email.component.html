@@ -1,0 +1,31 @@
+<mat-form-field appearance="fill" class="form-field">
+  <mat-label>Informe seu email</mat-label>
+  <input
+    autofocus
+    matInput
+    placeholder="Ex: user@gmail.com"
+    type="email"
+    [formControl]="control"
+    (input)="setEmail()"
+  />
+  @if (control.hasError('email') && !control.hasError('required')) {
+    <mat-error data-testid="email-error">Informe um e-mail válido</mat-error>
+  }
+
+  @if (control.hasError('required')) {
+    <mat-error data-testid="required-error"
+      >Email é <strong>obrigatoŕio</strong></mat-error
+    >
+  }
+</mat-form-field>
+
+<div class="container">
+  <button
+    mat-button
+    color="primary"
+    [disabled]="control.invalid"
+    [routerLink]="['..', 'password']"
+  >
+    Próximo
+  </button>
+</div>
