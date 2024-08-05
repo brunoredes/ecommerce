@@ -2,9 +2,9 @@
   "name": "auth-data-access",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "modules/data-access/auth/src",
-  "prefix": "lib",
+  "prefix": "ecommerce",
   "projectType": "library",
-  "tags": [],
+  "tags": ["type:data-access"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
