@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -7,8 +7,8 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
+import { RouterModule } from '@angular/router';
 import { Auth } from '@ecommerce/auth-data-access';
 
 @Component({
