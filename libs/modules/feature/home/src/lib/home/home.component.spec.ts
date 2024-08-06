@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { productsMock } from '@ecommerce/product-data-access';
-import { RecommendedProductsService } from 'modules/data-access/product/src/lib/recommended-products/recommended-products.service';
+import { productsMock, RecommendedProductsService } from '@ecommerce/product-data-access';
 import { of } from 'rxjs';
 import { HomeComponent } from './home.component';
 

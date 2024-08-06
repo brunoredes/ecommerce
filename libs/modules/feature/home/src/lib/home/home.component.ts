@@ -1,10 +1,12 @@
 import { AsyncPipe, CommonModule } from '@angular/common';
 import {
   Component,
+  inject,
   // inject
 } from '@angular/core';
-import { RecommendedProductsService } from 'modules/data-access/product/src/lib/recommended-products/recommended-products.service';
-import { ProductCardComponent } from 'modules/ui/product/src/lib/components/product-card/product-card.component';
+import { ProductCardComponent } from '@ecommerce/product-card';
+import { RecommendedProductsService } from '@ecommerce/product-data-access';
+
 @Component({
   selector: 'ecommerce-home',
   standalone: true,
@@ -13,10 +15,11 @@ import { ProductCardComponent } from 'modules/ui/product/src/lib/components/prod
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  private readonly recommendedProductsService = inject(
+    RecommendedProductsService,
+  );
+  
   public products$ = this.recommendedProductsService.getProducts();
 
-  constructor(private recommendedProductsService: RecommendedProductsService) {}
-  // private readonly recommendedProductsService = inject(
-  //   RecommendedProductsService,
-  // );
+  // constructor(private recommendedProductsService: RecommendedProductsService) {}
 }
