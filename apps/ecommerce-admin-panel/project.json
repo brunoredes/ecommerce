@@ -13,7 +13,6 @@
         "outputPath": "dist/apps/ecommerce-admin-panel",
         "index": "apps/ecommerce-admin-panel/src/index.html",
         "browser": "apps/ecommerce-admin-panel/src/main.ts",
-        "polyfills": ["zone.js"],
         "tsConfig": "apps/ecommerce-admin-panel/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
