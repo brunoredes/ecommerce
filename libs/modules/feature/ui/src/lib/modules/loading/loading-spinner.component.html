@@ -1,0 +1,10 @@
+<ng-container
+  [ngTemplateOutlet]="
+    loadingService.loading() ? spinnerTemplate : emptyTemplate
+  "
+></ng-container>
+<ng-template #spinnerTemplate>
+  <mat-spinner></mat-spinner>
+  <span>Carregando</span>
+</ng-template>
+<ng-template #emptyTemplate></ng-template>
