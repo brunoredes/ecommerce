@@ -1,9 +1,5 @@
 import { AsyncPipe, CommonModule } from '@angular/common';
-import {
-  Component,
-  inject,
-  // inject
-} from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ProductCardComponent } from '@ecommerce/product-card';
 import { RecommendedProductsService } from '@ecommerce/product-data-access';
 
@@ -18,7 +14,7 @@ export class HomeComponent {
   private readonly recommendedProductsService = inject(
     RecommendedProductsService,
   );
-  
+
   public products$ = this.recommendedProductsService.getProducts();
 
   // constructor(private recommendedProductsService: RecommendedProductsService) {}
