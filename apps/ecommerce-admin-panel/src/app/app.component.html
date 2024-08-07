@@ -2,11 +2,17 @@
   <ng-container
     *ngTemplateOutlet="isAuthenticated ? navTemplate : emptyTemplate"
   ></ng-container>
+  <ng-container
+    *ngTemplateOutlet="isAuthenticated ? actions : emptyTemplate"
+  ></ng-container>
 </ecommerce-header>
 <ng-template #navTemplate>
   <mat-nav-list>
     <a mat-list-item [activated]="true">Gerenciar usuários</a>
   </mat-nav-list>
+</ng-template>
+<ng-template #actions>
+  <span>Logout</span>
 </ng-template>
 <ng-template #emptyTemplate></ng-template>
 <main>
