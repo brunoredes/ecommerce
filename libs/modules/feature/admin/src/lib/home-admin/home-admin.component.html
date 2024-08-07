@@ -1,11 +1,9 @@
 <section>
-  <div>
-    <mat-icon
-      aria-hidden="false"
-      aria-label="Example home icon"
-      fontIcon="home"
-    ></mat-icon>
-    <h1>Gerenciamento de usuários</h1>
+  <div class="section__start">
+    <mat-icon aria-hidden="false" aria-label="Manage users icon"
+      >group</mat-icon
+    >
+    <h1 class="section__title">Gerenciamento de usuários</h1>
   </div>
   <hr />
 
@@ -15,5 +13,6 @@
         <lib-ecommerce-admin-card [user]="user" />
       </mat-grid-tile>
     }
+    <mat-paginator />
   </mat-grid-list>
 </section>

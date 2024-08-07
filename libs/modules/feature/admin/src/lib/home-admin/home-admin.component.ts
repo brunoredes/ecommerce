@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatIcon } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { AdminCardComponent } from '@ecommerce/admin-ui';
 @Component({
   selector: 'lib-home-admin',
@@ -11,8 +12,9 @@ import { AdminCardComponent } from '@ecommerce/admin-ui';
     CommonModule,
     MatListModule,
     MatGridListModule,
-    MatIcon,
+    MatIconModule,
     AdminCardComponent,
+    MatPaginatorModule,
   ],
   templateUrl: './home-admin.component.html',
   styleUrl: './home-admin.component.scss',
