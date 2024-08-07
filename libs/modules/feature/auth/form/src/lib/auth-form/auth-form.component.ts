@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -8,7 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Auth } from '@ecommerce/auth-data-access';
 
 @Component({
@@ -25,6 +25,8 @@ import { Auth } from '@ecommerce/auth-data-access';
   styleUrl: './auth-form.component.scss',
 })
 export class AuthFormComponent {
+  router = inject(Router);
+
   form = new FormGroup<Auth>({
     email: new FormControl(
       { value: '', disabled: false },
@@ -41,4 +43,8 @@ export class AuthFormComponent {
       },
     ),
   });
+
+  login(): void {
+    this.router.navigate(['home']);
+  }
 }
