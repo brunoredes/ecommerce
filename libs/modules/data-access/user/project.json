@@ -1,0 +1,17 @@
+{
+  "name": "user--data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/modules/data-access/user/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["type:data-access"],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/modules/data-access/user/jest.config.ts"
+      }
+    }
+  }
+}

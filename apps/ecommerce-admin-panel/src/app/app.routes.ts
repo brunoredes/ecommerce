@@ -8,6 +8,11 @@ export const appRoutes: Route[] = [
       import('@ecommerce/home-admin').then((c) => c.homeAdminRoutes),
   },
   {
+    path: 'user',
+    loadChildren: () =>
+      import('@ecommerce/user-detail').then((c) => c.userDetailRoutes),
+  },
+  {
     path: 'auth',
     loadChildren: () =>
       import('@ecommerce/auth-form').then((c) => c.authFormRoutes),

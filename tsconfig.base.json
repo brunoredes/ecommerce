@@ -39,7 +39,11 @@
         "libs/modules/feature/product/search/src/index.ts"
       ],
       "@ecommerce/product-ui": ["modules/ui/product/src/index.ts"],
-      "@ecommerce/ui": ["libs/modules/feature/ui/src/index.ts"]
+      "@ecommerce/ui": ["libs/modules/feature/ui/src/index.ts"],
+      "@ecommerce/user-detail": [
+        "libs/modules/feature/user/detail/src/index.ts"
+      ],
+      "@ecommerce/user-data-access": ["libs/modules/data-access/user/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
