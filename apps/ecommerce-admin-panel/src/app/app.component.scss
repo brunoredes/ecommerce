@@ -11,3 +11,16 @@ header {
 button {
   background-color: #b9c3ff;
 }
+mat-drawer-container {
+  background-color: transparent;
+  mat-drawer {
+    border-right: 1px solid #b9c3ff;
+    background-color: inherit;
+    padding: .5rem;
+  }
+}
+
+a {
+  background-color: #b9c3ff !important;
+  color: #1a1b23 !important;
+}

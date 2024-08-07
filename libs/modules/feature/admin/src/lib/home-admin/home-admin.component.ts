@@ -28,8 +28,8 @@ import { Observable } from 'rxjs';
 export class HomeAdminComponent {
   private readonly userService = inject(UserService);
   totalItems = 0;
-  pageSize = 3;
-  pagesOptions = [3, 6, 10, 15, 18];
+  pageSize = 4;
+  pagesOptions = [4, 6, 10, 15, 18];
   currentPage = 0;
   users$!: Observable<ApiResponse<User>>;
 

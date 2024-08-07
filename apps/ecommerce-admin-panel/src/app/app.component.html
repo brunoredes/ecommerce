@@ -1,26 +1,43 @@
 <ecommerce-header title="Painel Administrativo">
   <ng-container
-    *ngTemplateOutlet="isAuthenticated ? navTemplate : emptyTemplate"
-  ></ng-container>
-  <ng-container
     *ngTemplateOutlet="isAuthenticated ? actions : emptyTemplate"
   ></ng-container>
 </ecommerce-header>
-<ng-template #navTemplate>
-  <mat-nav-list>
-    <a mat-list-item [activated]="true">Gerenciar usuários</a>
-  </mat-nav-list>
-</ng-template>
 <ng-template #actions>
-  <button type="button" (click)="logout()" mat-fab>
-    <mat-icon
-      aria-hidden="false"
-      aria-label="logout icon"
-      title="Logout"
-    >logout</mat-icon>
+  <button type="button" (click)="logout()" mat-fab title="Sair">
+    <mat-icon aria-hidden="false" aria-label="logout icon" title="Logout"
+      >logout</mat-icon
+    >
   </button>
 </ng-template>
 <ng-template #emptyTemplate></ng-template>
-<main>
+<ng-template #navTemplate>
+  <mat-nav-list>
+    <a mat-list-item [activated]="true" routerLink="/home"
+      >Gerenciar usuários</a
+    >
+  </mat-nav-list>
+</ng-template>
+
+<ng-template #loggedContainer>
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+      <ng-container
+        *ngTemplateOutlet="isAuthenticated ? navTemplate : emptyTemplate"
+      ></ng-container>
+    </mat-drawer>
+    <mat-drawer-content>
+      <main>
+        <router-outlet />
+      </main>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</ng-template>
+
+<ng-template #loginTemplate>
   <router-outlet />
-</main>
+</ng-template>
+<ng-container
+  [ngTemplateOutlet]="isAuthenticated ? loggedContainer : loginTemplate"
+>
+</ng-container>

@@ -3,9 +3,10 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatButton, MatFabButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { AuthService } from '@ecommerce/auth-data-access';
 import { UiModule } from '@ecommerce/ui';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
   standalone: true,
@@ -17,6 +18,8 @@ import { UiModule } from '@ecommerce/ui';
     MatButton,
     MatFabButton,
     MatIcon,
+    MatSidenavModule,
+    RouterLink
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
