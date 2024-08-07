@@ -12,10 +12,15 @@
   </mat-nav-list>
 </ng-template>
 <ng-template #actions>
-  <span>Logout</span>
+  <button type="button" (click)="logout()" mat-fab>
+    <mat-icon
+      aria-hidden="false"
+      aria-label="logout icon"
+      title="Logout"
+    >logout</mat-icon>
+  </button>
 </ng-template>
 <ng-template #emptyTemplate></ng-template>
 <main>
   <router-outlet />
 </main>
-

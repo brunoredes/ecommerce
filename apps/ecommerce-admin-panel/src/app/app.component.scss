@@ -1,21 +1,13 @@
 :host {
   display: flex;
   flex-direction: column;
-  background-color: #e4e7ff;
-  min-height: 100vh;
-  min-height: 100dvh;
-  height: 100%;
 }
 
-// a {
-//   border: 1px solid red;
-// }
 header {
   display: flex;
   align-items: center;
 }
-// main {
-//   margin: 0 auto;
-//   max-width: 1550px;
-//   width: 100%;
-// }
+
+button {
+  background-color: #b9c3ff;
+}
