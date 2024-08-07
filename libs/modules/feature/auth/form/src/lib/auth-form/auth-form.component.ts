@@ -8,7 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Auth, AuthService } from '@ecommerce/auth-data-access';
 
 @Component({
@@ -26,6 +26,7 @@ import { Auth, AuthService } from '@ecommerce/auth-data-access';
 })
 export class AuthFormComponent {
   private readonly authService = inject(AuthService);
+  private readonly router = inject(Router);
 
   form = new FormGroup<Auth>({
     email: new FormControl(
@@ -46,6 +47,12 @@ export class AuthFormComponent {
 
   login() {
     const { email, password } = this.form.getRawValue();
-    this.authService.login(email, password).subscribe();
+    this.authService.login(email, password).subscribe({
+      next: (success) => {
+        if (success) {
+          this.router.navigate(['/']);
+        }
+      },
+    });
   }
 }

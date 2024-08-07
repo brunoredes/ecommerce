@@ -20,6 +20,7 @@ export class AuthService {
   login(email: string, password: string): Observable<boolean> {
     if (email === this.mockEmail && password === this.mockPassword) {
       this.localStorageService.setItem(this.tokenKey, this.mockToken);
+      this.router.navigate(['/']);
       return of(true);
     } else {
       return of(false);

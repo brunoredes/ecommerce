@@ -1,5 +1,5 @@
 import { inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { CanActivateFn, Router } from '@angular/router';
 import { AuthService } from '@ecommerce/auth-data-access';
 
 export function homeGuard() {
@@ -10,7 +10,6 @@ export function homeGuard() {
       router.navigate(['/auth']);
       return false;
     }
-    router.navigate(['/home']);
     return true;
   };
 }
@@ -22,6 +21,5 @@ export function homeGuard() {
 //     router.navigate(['/auth']);
 //     return false;
 //   }
-//   router.navigate(['/home']);
 //   return true;
 // };

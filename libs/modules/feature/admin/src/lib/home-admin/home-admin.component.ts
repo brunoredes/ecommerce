@@ -1,5 +1,11 @@
 import { AsyncPipe, CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  inject,
+  OnInit,
+} from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIcon } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -19,14 +25,15 @@ import { Observable } from 'rxjs';
     AdminCardComponent,
     MatPaginatorModule,
     AsyncPipe,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
   ],
   templateUrl: './home-admin.component.html',
   styleUrl: './home-admin.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeAdminComponent {
+export class HomeAdminComponent implements OnInit {
   private readonly userService = inject(UserService);
+  private cdr = inject(ChangeDetectorRef);
   totalItems = 0;
   pageSize = 4;
   pagesOptions = [4, 6, 10, 15, 18];
@@ -35,6 +42,10 @@ export class HomeAdminComponent {
 
   constructor() {
     this.loadUsers();
+  }
+
+  ngOnInit() {
+    this.cdr.detectChanges();
   }
 
   loadUsers() {
