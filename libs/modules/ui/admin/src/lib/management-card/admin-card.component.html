@@ -1,0 +1,32 @@
+@let managedUser = user();
+<mat-card role="region" [appearance]="'raised'"> 
+    <mat-card-header>
+      <span mat-card-title>{{managedUser.name}}</span>
+      <img mat-card-md-image
+        mat-card-image
+        [ngSrc]="managedUser.avatar"
+        loading="lazy"
+        width="112"
+        height="112"
+      />
+    </mat-card-header>
+    <mat-card-content>
+      {{managedUser.biography}}
+    </mat-card-content>
+    <mat-card-actions>
+        <button type="button" mat-fab>
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="switch_access_shortcut"
+          ></mat-icon>
+        </button>
+        <button type="button" mat-fab>
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="delete_forever"
+          ></mat-icon>
+        </button>
+    </mat-card-actions>
+  </mat-card>

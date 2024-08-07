@@ -1,0 +1,12 @@
+mat-card-actions {
+  gap: 1rem;
+}
+mat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button[mat-fab] {
+  background-color: #94a6ff;
+}
