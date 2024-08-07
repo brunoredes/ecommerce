@@ -26,6 +26,7 @@ import { Auth, AuthService } from '@ecommerce/auth-data-access';
 })
 export class AuthFormComponent {
   private readonly authService = inject(AuthService);
+
   form = new FormGroup<Auth>({
     email: new FormControl(
       { value: '', disabled: false },
@@ -45,7 +46,6 @@ export class AuthFormComponent {
 
   login() {
     const { email, password } = this.form.getRawValue();
-    console.log(email, password);
     this.authService.login(email, password).subscribe();
   }
 }

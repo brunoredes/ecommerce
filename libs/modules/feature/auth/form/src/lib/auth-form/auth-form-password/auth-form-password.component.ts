@@ -3,11 +3,12 @@ import {
   ChangeDetectionStrategy,
   Component,
   inject,
-  input,
+  OnInit,
 } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { Router } from '@angular/router';
 import { AuthFormComponent } from '../auth-form.component';
 
 @Component({
@@ -18,16 +19,14 @@ import { AuthFormComponent } from '../auth-form.component';
   styleUrl: './auth-form-password.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AuthFormPasswordComponent {
+export class AuthFormPasswordComponent implements OnInit {
+  router = inject(Router);
   control = inject(AuthFormComponent).form.controls.password;
-  loginInput = input<() => void>();
+  email =  inject(AuthFormComponent).form.controls.email;
 
-  authForm = inject(AuthFormComponent);
-
-  login() {
-    if(this.authForm && this.control.valid) {
-      this.authForm.login();
-    }
+  ngOnInit(): void {
+      if (this.email.invalid) {
+        this.router.navigate(['/auth']);
+      }
   }
-
 }
