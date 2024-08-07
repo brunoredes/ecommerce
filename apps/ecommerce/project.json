@@ -48,8 +48,8 @@
           "sourceMap": true,
           "fileReplacements": [
             {
-              "replace": "modules/data-access/product/src/environments/environment.ts",
-              "with": "modules/data-access/product/src/environments/environment.development.ts"
+              "replace": "libs/modules/data-access/product/src/environments/environment.ts",
+              "with": "libs/modules/data-access/product/src/environments/environment.development.ts"
             }
           ]
         }

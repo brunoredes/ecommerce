@@ -28,7 +28,7 @@
         "libs/modules/feature/product/detail/src/index.ts"
       ],
       "@ecommerce/product-env": [
-        "modules/data-access/product/src/environments/index.ts"
+        "libs/modules/data-access/product/src/environments/index.ts"
       ],
       "@ecommerce/product-search": [
         "libs/modules/feature/product/search/src/index.ts"
