@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { AdminCardComponent } from '@ecommerce/admin-ui';
@@ -12,7 +12,7 @@ import { AdminCardComponent } from '@ecommerce/admin-ui';
     CommonModule,
     MatListModule,
     MatGridListModule,
-    MatIconModule,
+    MatIcon,
     AdminCardComponent,
     MatPaginatorModule,
   ],

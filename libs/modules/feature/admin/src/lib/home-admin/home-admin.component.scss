@@ -1,21 +1,26 @@
 :host {
-    margin: 0 auto;
-    min-width: 1550px;
+  margin: 0 auto;
+  min-width: 1550px;
 }
 
 .section__start {
-    display: flex;
-    justify-content: center;
-    font-size: 2rem;
-    align-items: center;
-    gap: 1rem;
-    mat-icon {
-        width: 64px;
-        height: 64px;
-        font-size: 4rem;
-        color: #2a4fdc;
-    }
-    h1 {
-        color: #1a1b23;
-    }
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  align-items: center;
+  gap: 1rem;
+  mat-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 4rem;
+    color: #2a4fdc;
+  }
+  h1 {
+    color: #1a1b23;
+  }
+}
+
+mat-grid-list {
+    margin-bottom: 1rem;
 }
