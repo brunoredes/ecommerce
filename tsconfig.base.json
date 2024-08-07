@@ -15,6 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ecommerce/admin-ui": ["libs/modules/ui/admin/src/index.ts"],
+      "@ecommerce/admin-data-access": [
+        "libs/modules/data-access/admin/src/index.ts"
+      ],
       "@ecommerce/auth-data-access": [
         "libs/modules/data-access/auth/src/index.ts"
       ],
