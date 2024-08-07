@@ -6,6 +6,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { ApiResponse, User, UserService } from '@ecommerce/admin-data-access';
 import { AdminCardComponent } from '@ecommerce/admin-ui';
+import { LoadingSpinnerComponent } from '@ecommerce/ui';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'lib-home-admin',
@@ -18,6 +19,7 @@ import { Observable } from 'rxjs';
     AdminCardComponent,
     MatPaginatorModule,
     AsyncPipe,
+    LoadingSpinnerComponent
   ],
   templateUrl: './home-admin.component.html',
   styleUrl: './home-admin.component.scss',

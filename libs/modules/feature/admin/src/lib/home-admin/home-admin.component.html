@@ -6,6 +6,7 @@
     <h1 class="section__title">Gerenciamento de usuários</h1>
   </div>
   <hr />
+  <ecommerce-loading-spinner />
   @let users = users$ | async;
   <mat-grid-list cols="3" gutterSize="10" rowHeight="2:1">
     @for (user of users?.data; track user.id) {
