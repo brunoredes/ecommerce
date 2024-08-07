@@ -13,5 +13,5 @@
     "jest.config.ts",
     "src/**/*.test.ts"
   ],
-  "include": ["src/**/*.ts", "../admin/src/lib/home.guard.spec.ts", "../admin/src/lib/home.guard.ts"]
+  "include": ["src/**/*.ts"]
 }

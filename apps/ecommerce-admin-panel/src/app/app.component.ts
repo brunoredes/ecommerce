@@ -1,20 +1,17 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { UiModule } from '@ecommerce/ui';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
-import { MatGridListModule } from '@angular/material/grid-list';
+import { RouterModule } from '@angular/router';
+import { AuthService } from '@ecommerce/auth-data-access';
+import { UiModule } from '@ecommerce/ui';
 
 @Component({
   standalone: true,
   imports: [
     RouterModule,
-    MatListModule,
-    MatIconModule,
-    MatCardModule,
-    MatGridListModule,
     UiModule,
+    MatListModule,
+    CommonModule,
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -22,5 +19,13 @@ import { MatGridListModule } from '@angular/material/grid-list';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'ecommerce-admin-panel';
+  private readonly authService = inject(AuthService);
+
+  get isAuthenticated(): boolean {
+    return this.authService.isAuthenticated();
+  }
+
+  logout(): void {
+    this.authService.logout();
+  }
 }

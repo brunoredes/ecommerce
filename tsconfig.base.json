@@ -20,6 +20,7 @@
       ],
       "@ecommerce/auth-form": ["libs/modules/feature/auth/form/src/index.ts"],
       "@ecommerce/home": ["libs/modules/feature/home/src/index.ts"],
+      "@ecommerce/home-admin": ["libs/modules/feature/admin/src/index.ts"],
       "@ecommerce/product-card": ["libs/modules/ui/product/src/index.ts"],
       "@ecommerce/product-data-access": [
         "libs/modules/data-access/product/src/index.ts"

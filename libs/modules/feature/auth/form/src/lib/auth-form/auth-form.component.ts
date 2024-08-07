@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -9,7 +9,7 @@ import {
 } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
-import { Auth } from '@ecommerce/auth-data-access';
+import { Auth, AuthService } from '@ecommerce/auth-data-access';
 
 @Component({
   selector: 'lib-auth-form',
@@ -25,6 +25,7 @@ import { Auth } from '@ecommerce/auth-data-access';
   styleUrl: './auth-form.component.scss',
 })
 export class AuthFormComponent {
+  private readonly authService = inject(AuthService);
   form = new FormGroup<Auth>({
     email: new FormControl(
       { value: '', disabled: false },
@@ -41,4 +42,10 @@ export class AuthFormComponent {
       },
     ),
   });
+
+  login() {
+    const { email, password } = this.form.getRawValue();
+    console.log(email, password);
+    this.authService.login(email, password).subscribe();
+  }
 }
