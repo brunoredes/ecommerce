@@ -14,7 +14,7 @@
       {{managedUser.biography}}
     </mat-card-content>
     <mat-card-actions>
-        <button type="button" mat-fab>
+        <button type="button" mat-fab [routerLink]="'/user/'+ managedUser.id">
           <mat-icon
             aria-hidden="false"
             aria-label="Example home icon"

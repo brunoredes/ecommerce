@@ -1,5 +1,6 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { MatFabButton } from '@angular/material/button';
 import {
   MatCard,
   MatCardActions,
@@ -9,8 +10,8 @@ import {
   MatCardSubtitle,
   MatCardTitle
 } from '@angular/material/card';
-import { MatFabButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 import { User } from '@ecommerce/admin-data-access';
 
 @Component({
@@ -18,6 +19,7 @@ import { User } from '@ecommerce/admin-data-access';
   standalone: true,
   imports: [
     CommonModule,
+    RouterModule,
     MatCard,
     MatCardActions,
     MatCardHeader,
