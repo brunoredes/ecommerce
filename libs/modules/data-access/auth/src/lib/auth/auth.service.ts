@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { LocalstorageService } from '../localstorage/localstorage.service';
@@ -7,22 +7,20 @@ import { LocalstorageService } from '../localstorage/localstorage.service';
   providedIn: 'root',
 })
 export class AuthService {
+  private router: Router = inject(Router);
+  private localStorageService: LocalstorageService =
+    inject(LocalstorageService);
   private readonly tokenKey = 'auth_token';
   private readonly mockEmail = 'admin@mentoriaangularpro.com';
   private readonly mockPassword = '123456';
   private readonly mockToken = this.generateMockToken();
 
-  constructor(
-    private localStorageService: LocalstorageService,
-    private router: Router,
-  ) {}
-
   login(email: string, password: string): Observable<boolean> {
     if (email === this.mockEmail && password === this.mockPassword) {
       this.localStorageService.setItem(this.tokenKey, this.mockToken);
-      this.router.navigate(['/']);
       return of(true);
     } else {
+      this.router.navigate(['/auth']);
       return of(false);
     }
   }
