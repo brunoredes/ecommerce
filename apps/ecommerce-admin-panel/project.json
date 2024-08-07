@@ -21,7 +21,10 @@
             "input": "apps/ecommerce-admin-panel/public"
           }
         ],
-        "styles": ["apps/ecommerce-admin-panel/src/styles.scss"],
+        "styles": [
+          "@angular/material/prebuilt-themes/deeppurple-amber.css",
+          "apps/ecommerce-admin-panel/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
