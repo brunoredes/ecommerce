@@ -7,7 +7,7 @@ import { LocalstorageService } from '../localstorage/localstorage.service';
   providedIn: 'root',
 })
 export class AuthService {
-  private readonly tokenKey = 'qwertyuiopasdfghjklzxcvbnm123456';
+  private readonly tokenKey = 'auth_token';
   private readonly mockEmail = 'admin@mentoriaangularpro.com';
   private readonly mockPassword = '123456';
   private readonly mockToken = this.generateMockToken();
@@ -28,7 +28,7 @@ export class AuthService {
 
   logout(): void {
     this.localStorageService.removeItem(this.tokenKey);
-    this.router.navigate(['/login']);
+    this.router.navigate(['/auth']);
   }
 
   isAuthenticated(): boolean {
