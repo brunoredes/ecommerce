@@ -14,13 +14,13 @@
       {{managedUser.biography}}
     </mat-card-content>
     <mat-card-actions>
-        <button type="button" mat-fab [routerLink]="'/user/'+ managedUser.id">
+        <a type="button" mat-fab [routerLink]="'/user/'+ managedUser.id">
           <mat-icon
             aria-hidden="false"
             aria-label="Example home icon"
             fontIcon="switch_access_shortcut"
           ></mat-icon>
-        </button>
+        </a>
         <button type="button" mat-fab>
           <mat-icon
             aria-hidden="false"
